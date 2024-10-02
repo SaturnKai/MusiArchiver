@@ -1,10 +1,11 @@
-import type { BackupData, Playlist } from './musi';
+import { convertBackup, type BackupData, type Playlist } from './musi';
 import YouTubeAPI from './youtube';
 import JSZip from 'jszip';
 
 type Backup = {
 	code: string;
 	data: BackupData;
+	raw: string;
 };
 
 class Core {
@@ -37,7 +38,8 @@ class Core {
 					if (response.success) {
 						this.backup = {
 							code: backupCode,
-							data: response.backupData,
+							data: response.backupResult.data,
+							raw: response.backupResult.raw,
 						};
 						res(true);
 					}
@@ -46,6 +48,35 @@ class Core {
 				},
 			);
 		});
+	}
+
+	public setBackup(raw: string): boolean {
+		// parse backup data
+		let backupData: any;
+		try {
+			backupData = JSON.parse(raw);
+		} catch {
+			return false;
+		}
+
+		if (backupData.version === 2) {
+			this.backup = {
+				code: '',
+				data: backupData as BackupData,
+				raw,
+			};
+		} else if (backupData.library) {
+			const conversion = convertBackup(backupData);
+			this.backup = {
+				code: '',
+				data: conversion,
+				raw,
+			};
+		} else {
+			return false; // invalid
+		}
+
+		return true;
 	}
 
 	private generateCSV(
@@ -83,7 +114,7 @@ class Core {
 		}
 
 		const zip = new JSZip();
-		zip.file('_archive.json', JSON.stringify(this.backup.data));
+		zip.file('_archive.json', this.backup.raw);
 
 		let playlistCSV = 'id,name,date,lp_date,share_token,share_identifier\n';
 		for (const playlist of this.backup.data.playlists) {

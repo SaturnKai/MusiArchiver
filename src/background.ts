@@ -2,8 +2,8 @@ import { getBackupData } from './lib/musi';
 
 async function handleBackupRequest(code: string, sendResponse: Function) {
 	try {
-		const backupData = await getBackupData(code);
-		sendResponse({ success: true, backupData });
+		const backupResult = await getBackupData(code);
+		sendResponse({ success: true, backupResult });
 	} catch (error) {
 		sendResponse({ success: false, error });
 	}
@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	} else if (request.action === 'downloadArchive') {
 		chrome.downloads.download({
 			url: request.url,
-			filename: `Musi Backup Export [${new Date().toDateString()}].zip`,
+			filename: `Musi Backup Archive [${new Date().toDateString()}].zip`,
 			saveAs: false,
 		});
 		return true;

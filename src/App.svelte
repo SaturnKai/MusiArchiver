@@ -31,7 +31,7 @@
 </svelte:head>
 
 {#if transferPage === false}
-	<Code on:code-set={startTransferPage} />
+	<Code on:backup-set={startTransferPage} />
 {:else}
 	<Transfer />
 {/if}

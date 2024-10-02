@@ -4,6 +4,7 @@
 	import nProgress from 'nprogress';
 
 	const dispatch = createEventDispatcher();
+	let fileElement: HTMLInputElement;
 	let backupCode: string;
 	let error: string;
 
@@ -13,7 +14,7 @@
 		try {
 			const result = await Core.instance.setBackupCode(backupCode);
 			if (result) {
-				dispatch('code-set');
+				dispatch('backup-set');
 			} else {
 				error = 'Failed to get backup from code.';
 			}
@@ -23,6 +24,27 @@
 		} finally {
 			nProgress.done();
 		}
+	}
+
+	async function uploadFile(_event: Event) {
+		const file = fileElement.files![0];
+		const reader = new FileReader();
+		reader.onload = () => {
+			try {
+				const content = reader.result as string;
+				const result = Core.instance.setBackup(content);
+				if (result) {
+					dispatch('backup-set');
+					return;
+				}
+
+				error = 'Invalid backup archive.';
+			} catch {
+				error = 'Invalid backup archive.';
+			}
+		};
+
+		reader.readAsText(file);
 	}
 </script>
 
@@ -54,10 +76,22 @@
 		/>
 	</div>
 
-	<button
-		class="bg-orange-500 hover:bg-orange-600 px-8 py-2 rounded font-medium mt-5"
-		on:click={confirmCode}>Confirm</button
-	>
+	<div class="">
+		<button
+			class="bg-orange-500 hover:bg-orange-600 px-8 py-2 rounded font-medium mt-5 mr-5"
+			on:click={confirmCode}>Confirm</button
+		>
+		<button
+			class="bg-none border-2 border-orange-500 hover:border-orange-600 px-8 py-2 rounded font-medium mt-5"
+			on:click={() => fileElement.click()}>Upload Raw Archive</button
+		>
+		<input
+			bind:this={fileElement}
+			on:change={uploadFile}
+			class="hidden"
+			type="file"
+		/>
+	</div>
 
 	{#if error != undefined}
 		<p class="text-red-400 font-semibold mt-3">{error}</p>
