@@ -72,6 +72,7 @@
 			class="block border border-gray-400 bg-none rounded px-2 py-1 mt-2 focus:outline-cyan-300 font-mono"
 			id="backup-code"
 			type="text"
+			placeholder="Ex: 4c39ksi"
 			bind:value={backupCode}
 		/>
 	</div>

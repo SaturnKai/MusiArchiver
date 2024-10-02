@@ -71,8 +71,10 @@
 				/>
 			</div>
 		</div>
+		<p class="playlist-name text-base font-semibold mt-4 truncate">
+			{playlist.name}
+		</p>
 	</div>
-	<p class="playlist-name text-base font-semibold mt-4">{playlist.name}</p>
 	<p class="text-sm text-gray-500 font-medium">
 		{playlistTracks.length} tracks
 	</p>
