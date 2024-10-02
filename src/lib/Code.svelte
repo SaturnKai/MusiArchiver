@@ -83,7 +83,8 @@
 		>
 		<button
 			class="bg-none border-2 border-orange-500 hover:border-orange-600 px-8 py-2 rounded font-medium mt-5"
-			on:click={() => fileElement.click()}>Upload Raw Archive</button
+			on:click={() => fileElement.click()}
+			>Upload Archive <span class="font-mono">(_archive.json)</span></button
 		>
 		<input
 			bind:this={fileElement}
