@@ -166,12 +166,9 @@ class Core {
 			return false;
 		}
 
-		let musiPlaylist = false;
 		for (const id of playlistIds) {
 			// check musi playlist
-			if (id === 'library_tracks') {
-				musiPlaylist = true;
-			}
+			let musiPlaylist = id === 'library_tracks' ? true : false;
 
 			// get playlist name
 			let playlistName = 'Main Library';
