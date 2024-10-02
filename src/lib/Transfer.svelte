@@ -89,7 +89,11 @@
 
 	{#if importSuccess === true}
 		<p class="text-green-400 font-semibold mt-3">
-			Successfully imported selected playlists.
+			Successfully imported selected playlists. <a
+				class="text-blue-400 hover:text-blue-500"
+				href="https://music.youtube.com/library/playlists"
+				target="_blank">View</a
+			>
 		</p>
 	{:else if importSuccess === false}
 		<p class="text-red-400 font-semibold mt-3">
