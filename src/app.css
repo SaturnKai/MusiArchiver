@@ -1,0 +1,21 @@
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+:root {
+	color-scheme: dark;
+}
+
+body {
+	background: #131313;
+}
+
+#nprogress .bar {
+	@apply bg-orange-500;
+}
+
+#nprogress .peg {
+	box-shadow:
+		0 0 10px #fb923c,
+		0 0 5px #fb923c;
+}

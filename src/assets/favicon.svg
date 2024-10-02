@@ -1,0 +1,22 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame" clip-path="url(#clip0_1_2)">
+<rect id="Background" width="400" height="400" rx="55" fill="url(#paint0_linear_1_2)"/>
+<g id="Arrow">
+<path id="ArrowBody" d="M313.132 240.016C321.582 216.124 322.252 190.171 315.046 165.876C307.84 141.581 293.127 120.191 273.017 104.771C252.906 89.3513 228.431 80.6941 203.097 80.04C177.764 79.3858 152.875 86.7684 131.995 101.13C111.116 115.491 95.3189 136.093 86.8684 159.984C78.418 183.875 77.7478 209.828 84.9541 234.124C92.1603 258.419 106.873 279.809 126.983 295.229C147.094 310.649 171.569 319.306 196.903 319.96" stroke="url(#paint1_linear_1_2)" stroke-width="55"/>
+<path id="ArrowHead" d="M298.671 296.747C295.361 299.014 290.802 297.457 289.57 293.638L267.042 223.79C265.526 219.091 270.018 214.675 274.691 216.271L357.768 244.644C362.441 246.24 363.294 252.482 359.22 255.272L298.671 296.747Z" fill="white"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_2" x1="200" y1="0" x2="200" y2="400" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FEB439"/>
+<stop offset="1" stop-color="#FC5C4E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_2" x1="313" y1="223" x2="188" y2="323" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.2"/>
+</linearGradient>
+<clipPath id="clip0_1_2">
+<rect width="400" height="400" fill="white"/>
+</clipPath>
+</defs>
+</svg>
