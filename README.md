@@ -1,6 +1,6 @@
 # Musi Archiver
 
-A chrome extension that allows you to import your Musi playlists into YouTube or download them as an archive.
+A chrome extension that allows you to import your Musi playlists into YouTube or download them as an archive. Since Musi was recently removed off the App Store, there is an increasing need for archiving your music.
 
 ## Tutorial
 
@@ -16,4 +16,6 @@ Make sure you have used the latest version of the Musi app with your backup code
 
 ## Credits
 
-Developed by [SaturnKai](https://saturnkai.dev/). This extension is not affiliated with Musi or YouTube, and I am not responsible for how you utilize it.
+Developed by [SaturnKai](https://saturnkai.dev/).
+
+**This extension is not affiliated with Musi or YouTube, and I am not responsible for how you utilize it.**
