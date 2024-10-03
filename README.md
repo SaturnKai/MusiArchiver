@@ -29,7 +29,9 @@ Since the recent removal of Musi off of the App Store, preserving your music has
 
 ---
 
-Once the extension is added, press the extension icon or navigate to https://music.youtube.com/music_premium/musi_transfer and follow the instructions. Make sure you are logged into YouTube music if you plan on importing your library. **If you run into any issues importing your library**, ensure that you are using an up to date version of Musi for your backup code so that your music is up to date. If you this does not solve your problem please [create an issue](https://github.com/SaturnKai/MusiArchiver/issues) or contact me via the following:
+Once the extension is added, press the extension icon or navigate to https://music.youtube.com/music_premium/musi_archiver and follow the instructions. Make sure you are logged into YouTube music if you plan on importing your library.
+
+**If you run into any issues importing your library**, ensure that you are using an up to date version of Musi for your backup code so that your music is up to date. Please [create an issue](https://github.com/SaturnKai/MusiArchiver/issues) if you run into any additional problems, or contact me via the following:
 
 - **Discord:** saturnkai
 - **Email:** bgardenhire8146@gmail.com
