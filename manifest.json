@@ -3,7 +3,7 @@
 	"name": "Musi Archiver",
 	"version": "1.0.0",
 	"description": "An extension that allows you to import your Musi playlists into YouTube or download them as an archive.",
-	"permissions": ["tabs", "downloads"],
+	"permissions": ["downloads"],
 	"action": {},
 	"background": {
 		"service_worker": "src/background.ts"
