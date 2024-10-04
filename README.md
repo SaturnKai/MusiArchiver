@@ -13,11 +13,11 @@ Since the recent removal of Musi off of the App Store, preserving your music has
   </figure>
 </div>
 
-## Tutorial
+## Installation
 
 ### Chrome Web Store
 
-1. Coming soon!
+1. The easiest way to download the extension is from the [Chrome Web Store here](https://chromewebstore.google.com/detail/musi-archiver/dcbppnddggooihipfcibbddcpgfmepfm).
 
 ### Manually
 
@@ -29,7 +29,9 @@ Since the recent removal of Musi off of the App Store, preserving your music has
 
 ---
 
-Once the extension is added, press the extension icon or navigate to https://music.youtube.com/music_premium/musi_archiver and follow the instructions. Make sure you are logged into YouTube music if you plan on importing your library.
+#### Usage
+
+**Once the extension is added**, press the extension icon or navigate to https://music.youtube.com/music_premium/musi_archiver and follow the instructions. Make sure you are logged into YouTube music if you plan on importing your library.
 
 **If you run into any issues importing your library**, ensure that you are using an up to date version of Musi for your backup code so that your music is up to date. Please [create an issue](https://github.com/SaturnKai/MusiArchiver/issues) if you run into any additional problems, or contact me via the following:
 
