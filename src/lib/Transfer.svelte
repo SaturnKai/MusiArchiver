@@ -40,7 +40,7 @@
 	});
 </script>
 
-<main class="max-w-screen-lg mx-auto p-4 h-[80vh] mt-[40px] mb-[80px]">
+<main class="max-w-screen-lg mx-auto p-4 h-[80vh] mt-[40px]">
 	<h1 class="text-3xl font-bold">
 		Musi Archiver <span class="text-gray-400 font-semibold text-lg">v1.0</span>
 	</h1>
@@ -100,4 +100,6 @@
 			Failed to import selected playlists.
 		</p>
 	{/if}
+
+	<div class="pb-[80px]"></div>
 </main>
