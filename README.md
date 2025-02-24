@@ -38,6 +38,12 @@ Since the recent removal of Musi off of the App Store, preserving your music has
 - **Discord:** saturnkai
 - **Email:** bgardenhire8146@gmail.com
 
+## Changelog
+
+### 2025-02-21
+
+- Fixed an issue **on release** where the `use_dynamic_url` manifest key was set, preventing the extension from working properly.
+
 ## Credits
 
 Developed by [SaturnKai](https://saturnkai.dev/).
